@@ -24,7 +24,7 @@ export default async function auth(req: any, res: any) {
       async authorize(credentials) {
         try {
           const siwe = new SiweMessage(JSON.parse(credentials?.message || "{}"))
-          const nextAuthUrl = new URL('https://siwe-5sn5ex8qa-jfkongphop.vercel.app/')
+          const nextAuthUrl = new URL('https://siwe-5sn5ex8qa-jfkongphop.vercel.app')
 
           const result = await siwe.verify({
             signature: credentials?.signature || "",
